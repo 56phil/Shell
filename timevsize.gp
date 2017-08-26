@@ -95,7 +95,7 @@ set mx2tics default
 set my2tics default
 set mcbtics default
 set mrtics default
-set xtics border in scale 1,0.5 nomirror norotate  offset character 0, -2.25, 0 autojustify
+set xtics border in scale 1,0.5 nomirror norotate  offset character 0, -0.25, 0 autojustify
 set xtics  norangelimit autofreq  font ", 9" format "%0.0f"
 set ytics border in scale 1,0.5 nomirror norotate  autojustify
 set ytics  norangelimit autofreq  font ", 9"
@@ -126,12 +126,12 @@ set urange [ * : * ] noreverse nowriteback
 set vrange [ * : * ] noreverse nowriteback
 set xrange [ * : * ] noreverse nowriteback
 set xlabel "Number of Elements"
-set xlabel  offset character 0, -3.25556, 0 font "" textcolor lt -1 norotate
+set xlabel  offset character 0, 0.0, 0 font ",15" textcolor lt -1 norotate
 set x2label ""
 set x2label  font "" textcolor lt -1 norotate
 set x2range [ * : * ] noreverse nowriteback
 set ylabel "Time (Seconds)"
-set ylabel  offset character -0.225, 0, 0 font "" textcolor lt -1 rotate by -270
+set ylabel  offset character 2.0, 0, 0 font ",15" textcolor lt -1 rotate by -270
 set y2label ""
 set y2label  font "" textcolor lt -1 rotate by -270
 set yrange [ * : * ] noreverse nowriteback

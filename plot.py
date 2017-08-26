@@ -19,8 +19,8 @@ def display_ordered_results(d):
 
     for k0 in OrderedDict(sorted(results.items())):
         print '{}\t{} - {}'.format(k0, results[k0][1][1], results[k0][-1][1])
-        for t in results[k0]:
-            print '{:4s}'.format(t[0]),
+        for tup in results[k0]:
+            print '{:4s}'.format(tup[0]),
         print '\n'
 
 
@@ -29,7 +29,7 @@ def extract_box_data(d):
     for k0 in OrderedDict(sorted(d.items())):
         results.append([k0])
         for k1 in OrderedDict(sorted(d[k0].items())):
-            results[-1].append(np.median(d[k0][k1]['times']))
+            results[-1] += d[k0][k1]['times']
 
     dset = np.asarray(results)
     dset = dset.transpose()

@@ -28,7 +28,7 @@ set yrange [ * : * ]
 unset key
 
 #header = system('head -1 '.file);
-set key autotitle columnhead width 0.5 samplen .25 font ",7"
+set key autotitle columnhead width 0.5 samplen .25 font ",10"
 
 
 ### Start multiplot (3x2 layout)

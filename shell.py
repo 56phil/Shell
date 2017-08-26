@@ -91,20 +91,20 @@ def shell_sort(lst, gaps):
     gaps: liat of ints gaps[-1] must be 1
     returns: names tuple
     """
-    swaps = 0
-    compares = 0
+    inner = 0
+    outer = 0
     t = time.time()
     for gap in gaps:
         for i in range(gap, len(lst)):
             j = i
             temp = lst[j]
-            swaps += 1
+            outer += 1
             while j >= gap and lst[j - gap] > temp:
-                compares += 1
+                inner += 1
                 lst[j] = lst[j - gap]
                 j -= gap
             lst[j] = temp
-    return data(time.time() - t, swaps, compares, lst)
+    return data(time.time() - t, inner, outer, lst)
 
 
 def verify(lst):
