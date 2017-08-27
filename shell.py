@@ -96,9 +96,9 @@ def shell_sort(lst, gaps):
     t = time.time()
     for gap in gaps:
         for i in range(gap, len(lst)):
+            outer += 1
             j = i
             temp = lst[j]
-            outer += 1
             while j >= gap and lst[j - gap] > temp:
                 inner += 1
                 lst[j] = lst[j - gap]

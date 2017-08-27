@@ -108,13 +108,7 @@ set cbtics border in scale 1,0.5 mirror norotate  autojustify
 set cbtics  norangelimit autofreq  font ", 9"
 set rtics axis in scale 1,0.5 nomirror norotate  autojustify
 set rtics  norangelimit autofreq  font ", 9"
-unset paxis 1 tics
-unset paxis 2 tics
-unset paxis 3 tics
-unset paxis 4 tics
-unset paxis 5 tics
-unset paxis 6 tics
-unset paxis 7 tics
+unset for [i = 1:7] paxis i tics
 set title ""
 set title  font "" norotate
 set timestamp bottom

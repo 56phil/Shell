@@ -18,6 +18,7 @@ set output 'box.png'
 set style fill solid 0.50 border -1
 set style boxplot outliers pointtype 7
 set style data boxplot
+set linetype 1 lc rgb"cyan"
 set xtics format ""
 unset xtics
 set ylabel "Time (Seconds)"
@@ -33,12 +34,11 @@ set key autotitle columnhead width 0.5 samplen .25 font ",10"
 
 ### Start multiplot (3x2 layout)
 set multiplot layout 3,2 rowsfirst
-#set title word(header,1)
-plot file using (0):1 lc rgb '#008800'
-plot file using (0):2 lc rgb '#0088cc'
-plot file using (0):3 lc rgb '#888888'
-plot file using (0):4 lc rgb '#cc8800'
-plot file using (0):5 lc rgb '#4488cc'
-plot file using (0):6 lc rgb '#88ff88'
+plot file using (0):1
+plot file using (0):2
+plot file using (0):3
+plot file using (0):4
+plot file using (0):5
+plot file using (0):6
 unset multiplot
 ### End multiplot
